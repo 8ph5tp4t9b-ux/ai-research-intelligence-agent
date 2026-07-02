@@ -1,0 +1,22 @@
+{
+    "actor-start": {
+        "eventTitle": "Actor start",
+        "eventDescription": "Base fee for initializing the research agent and preparing the environment.",
+        "eventPriceUsd": 0.15
+    },
+    "task-completed-quick": {
+        "eventTitle": "Quick research completed",
+        "eventDescription": "Light research: 5 search results + 3 pages analyzed. Best for fast overviews and fact-checking.",
+        "eventPriceUsd": 0.4
+    },
+    "task-completed-standard": {
+        "eventTitle": "Standard research completed",
+        "eventDescription": "Balanced research: 10 search results + 7 pages analyzed. Best for market snapshots and competitor briefs.",
+        "eventPriceUsd": 0.6
+    },
+    "task-completed-deep": {
+        "eventTitle": "Deep research completed",
+        "eventDescription": "Comprehensive research: 20 search results + 15 pages analyzed. Best for due diligence and investment memos.",
+        "eventPriceUsd": 0.9
+    }
+}

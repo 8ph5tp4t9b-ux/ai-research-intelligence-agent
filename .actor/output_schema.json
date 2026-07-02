@@ -1,0 +1,38 @@
+{
+    "$schema": "https://apify.com/schemas/v1/actor.ide.json",
+    "actorSpecification": 1,
+    "title": "AI Research Intelligence Agent",
+    "description": "Deep research and analysis automation. One query = comprehensive report with sources, trends, risks, and actionable recommendations. Powered by CrewAI + LLM.",
+    "input": "https://api.apify.com/v2/acts/apify~ai-research-intelligence-agent/input?token=YOUR_TOKEN",
+    "datasetOutput": "https://api.apify.com/v2/acts/apify~ai-research-intelligence-agent/runs/last/dataset?token=YOUR_TOKEN",
+    "pricingInfos": {
+        "pricingModel": "PAY_PER_EVENT",
+        "events": [
+            {
+                "eventTitle": "Actor start",
+                "eventDescription": "Base fee for initializing the research agent and preparing the environment.",
+                "eventPriceUsd": 0.15
+            },
+            {
+                "eventTitle": "Quick research completed",
+                "eventDescription": "Light research: 5 search results + 3 pages analyzed. Best for fast overviews and fact-checking.",
+                "eventPriceUsd": 0.4
+            },
+            {
+                "eventTitle": "Standard research completed",
+                "eventDescription": "Balanced research: 10 search results + 7 pages analyzed. Best for market snapshots and competitor briefs.",
+                "eventPriceUsd": 0.6
+            },
+            {
+                "eventTitle": "Deep research completed",
+                "eventDescription": "Comprehensive research: 20 search results + 15 pages analyzed. Best for due diligence and investment memos.",
+                "eventPriceUsd": 0.9
+            }
+        ]
+    },
+    "defaultRunOptions": {
+        "build": "latest",
+        "timeoutSecs": 600,
+        "memoryMbytes": 4096
+    }
+}

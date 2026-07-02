@@ -1,0 +1,19 @@
+{
+    "$schema": "https://apify.com/schemas/v1/actor.ide.json",
+    "actorSpecification": 1,
+    "name": "ai-research-intelligence-agent",
+    "title": "AI Research Intelligence Agent",
+    "description": "Autonomous AI agent that researches any topic across the web, integrates multi-source data, and generates structured intelligence reports with sources, key findings, opportunities, and recommendations. Powered by CrewAI + Apify Actors.",
+    "version": "0.1",
+    "buildTag": "latest",
+    "input": "./input_schema.json",
+    "storages": {
+        "dataset": "./dataset_schema.json"
+    },
+    "output": "./output_schema.json",
+    "meta": {
+        "templateId": "python-crewai",
+        "generatedBy": "custom"
+    },
+    "dockerfile": "../Dockerfile"
+}

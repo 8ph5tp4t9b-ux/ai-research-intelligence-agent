@@ -1,0 +1,30 @@
+{
+    "$schema": "https://apify.com/schemas/v1/dataset.ide.json",
+    "actorSpecification": 1,
+    "fields": {
+        "query": {
+            "type": "string",
+            "description": "The original research query submitted by the user."
+        },
+        "depth": {
+            "type": "string",
+            "description": "Research depth level used: quick, standard, or deep."
+        },
+        "model_used": {
+            "type": "string",
+            "description": "LLM model used for analysis."
+        },
+        "tokens_used": {
+            "type": "integer",
+            "description": "Total LLM tokens consumed during the research run."
+        },
+        "report": {
+            "type": "object",
+            "description": "Structured intelligence report containing executive_summary, key_findings, market_landscape, opportunities, risks, recommendations, sources, and raw_analysis."
+        },
+        "markdown_report": {
+            "type": "string",
+            "description": "Formatted Markdown version of the report (only present when outputFormat=markdown)."
+        }
+    }
+}

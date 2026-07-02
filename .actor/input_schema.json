@@ -1,0 +1,50 @@
+{
+    "$schema": "https://apify.com/schemas/v1/input.ide.json",
+    "title": "AI Research Intelligence Agent",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "query": {
+            "title": "Research Topic",
+            "type": "string",
+            "description": "The topic, company, market, or question you want researched. Be specific for best results. Examples: 'electric vehicle market China 2026', 'competitor analysis of Notion vs Obsidian', 'AI coding tools market trends'.",
+            "editor": "textfield",
+            "prefill": "AI agent economy market size and key players 2026",
+            "default": "AI agent economy market size and key players 2026"
+        },
+        "modelName": {
+            "title": "LLM Model",
+            "type": "string",
+            "description": "The OpenAI model used for analysis. GPT-4o gives deeper analysis; GPT-4o-mini is faster and cheaper.",
+            "enum": ["gpt-4o", "gpt-4o-mini"],
+            "default": "gpt-4o-mini",
+            "prefill": "gpt-4o-mini"
+        },
+        "depth": {
+            "title": "Research Depth",
+            "type": "string",
+            "description": "Controls how many sources are searched and analyzed. Quick = 5 results + 3 pages; Standard = 10 results + 7 pages; Deep = 20 results + 15 pages.",
+            "enum": ["quick", "standard", "deep"],
+            "default": "standard",
+            "prefill": "standard"
+        },
+        "maxSources": {
+            "title": "Max Sources to Cite",
+            "type": "integer",
+            "description": "Maximum number of distinct sources to include in the final report.",
+            "minimum": 3,
+            "maximum": 30,
+            "default": 10,
+            "prefill": 10
+        },
+        "outputFormat": {
+            "title": "Output Format",
+            "type": "string",
+            "description": "Structured = JSON only; Markdown = JSON + formatted Markdown report.",
+            "enum": ["structured", "markdown"],
+            "default": "structured",
+            "prefill": "structured"
+        }
+    },
+    "required": ["query"]
+}
